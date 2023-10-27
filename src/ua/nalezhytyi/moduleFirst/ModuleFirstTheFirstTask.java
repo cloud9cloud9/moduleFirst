@@ -8,7 +8,7 @@ public class ModuleFirstTheFirstTask {
     // для 1 4 5 1 1 3 ответ 4. *Создать метод, который
     // принимает массив и возвращает количество  различных  элементов.
     public static void main(String[] args) {
-        int[] array = new int[3];
+        int[] array = new int[5];
         fillArray(array);
         int calcUniqueNum = calcUniqueNumbers(array);
         System.out.println(Arrays.toString(array));
@@ -17,7 +17,6 @@ public class ModuleFirstTheFirstTask {
 
     public static int calcUniqueNumbers(int[] array) {
         int calcUniqueNum = 1;
-        int numbersOfArrayForCycle = array[0];
         if(array.length == 0) return 0;
         for (int i = 1; i < array.length; i++) {
             int current = array[i];
@@ -25,7 +24,7 @@ public class ModuleFirstTheFirstTask {
             for (int j = 0; j < i; j++) {
                 if(current == array[j]){
                     isUniqueNumInArray = false;
-                    continue;
+                    break;
                 }
             }
             if(isUniqueNumInArray){

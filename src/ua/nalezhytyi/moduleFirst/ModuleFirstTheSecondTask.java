@@ -63,7 +63,6 @@ public class ModuleFirstTheSecondTask {
             System.out.println();
         }
     }
-
     public static boolean isCellExists(String[][] board, String cell) {
         String letter = cell.substring(0, 1);
         int number = Integer.parseInt(cell.substring(1));
@@ -75,7 +74,6 @@ public class ModuleFirstTheSecondTask {
             return false;
         }
     }
-
     public static boolean isRightMove(String startCell, String endCell) {
         char startX = startCell.charAt(0);
         char startY = startCell.charAt(1);
